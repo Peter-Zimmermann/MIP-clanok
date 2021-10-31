@@ -15,15 +15,15 @@
 
 \pagestyle{headings}
 
-\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Softvér v automobilovom priemysle\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2020/21, vedenie: Ing. Fedor Lehocki, Phd.}} % meno a priezvisko vyučujúceho na cvičeniach
 
-\author{Meno Priezvisko\\[2pt]
+\author{Peter Zimmermann\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
-	{\small \texttt{...@stuba.sk}}
+	{\small \texttt{xzimmermann@stuba.sk}}
 	}
 
-\date{\small 30. september 2015} % upravte
+\date{\small 11. október 2021} % upravte
 
 
 
@@ -48,28 +48,36 @@ Záverečné poznámky prináša časť~\ref{zaver}.
 
 
 
-\section{Nejaká časť} \label{nejaka}
+\section{Postupy vo vývoji automobilového softvéru} \label{Postupy}
+V tejto sekcii sa primárne zameriavam na tri hlavné postupy pri vývoji automobilového softvéru.
 
-Z obr.~\ref{f:rozhod} je všetko jasné. 
+Vývoj automobilového softvéru a jeho samotné aplikovanie je v dnešnej dobe jeden z najhlavnejších procesov pri zhotovovaní automobilu. Je to proces, ktorý pozostáva z viacerých postupov: 
+\begin{enumerate}
+\item Budovanie systému
+\item Vývoj softvéru
+\item Prevádzka
+\end{enumerate}
 
-\begin{figure*}[tbh]
-\centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
-\caption{Rozhodujúci argument.}
-\label{f:rozhod}
-\end{figure*}
+Prvý z postupov procesu je budovanie systému. V tomto postupe sa výrobcovia originálnych zariadení obvykle zaoberajú požiadavkami, ktoré sú primárne zamerané na funkčnosť zariadenia, ktoré bude najviac vyhovovať stanoveným požiadavkám (npr. riadiaca jednotka, hardvér palubného počítača). Títo výrobcovia sa vo väčšine prípadov riadia architektúrou automobilového open systému s názvom „AUTOSAR“. AUTOSAR je v dnešnej dobe celosvetové vývojove partnerstvo v oblasti softvéru a elektroniky v automobiloch. 
+
+Druhým z postupov je vývoj samotného softvéru, ktorého hlavným cieľom je vytvoriť viacero programovacích kódov, z ktorých sa vyberajú tie najvhodnejšie, ktoré budú najlepšie pracovať s už zvolenými zariadeniami. Aby sa dokázali rozlíšiť rôzne úrovne zložitosti softvéru, možno použiť dva najbežnejšie modely a V-Model a Agile model.  
+Posledným postupom je samotná prevádzka. Znamená to, že každý softvér je aj po vyrobení a uvedenia do predaju udržiavaný aktualizáciami, aby prevádzka a funkčnosť samotného softvéru bola čo najdlhšia.
 
 
 
-\section{Iná časť} \label{ina}
+
+\section{Modely pre vývoj automobilového softvéru} \label{modely}
 
 Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
 
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
+\subsection{V-Model} \label{vmodel}
+
+\subsection{Agile Model} \label{agilemodel}
+
+\subsection{Porovnávanie V-Modelu a Agile Modelu} \label{porovnanie}
 
 Niekedy treba uviesť zoznam:
 
@@ -101,12 +109,13 @@ Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom
 
 
 
-\section{Dôležitá časť} \label{dolezita}
+\section{Testovanie} \label{testovanie}
+
+\subsection{Komplexné informácie k testovaniu softvéru} \label{komplexnetestovanie}
 
 
 
-
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
+\section{Porovnávanie dvoch popredných automobiliek z hľadiska softvéru} \label{automobilky}
 
 
 
@@ -118,7 +127,7 @@ Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
 
-% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-\bibliography{literatura}
+% týmto sa generuje zoznam literatúry z obsahu súboru .bib podľa toho, na čo sa v článku odkazujete
+\bibliography{HLAVNALITERATURA}
 \bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
