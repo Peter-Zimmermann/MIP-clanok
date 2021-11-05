@@ -15,7 +15,7 @@
 
 \pagestyle{headings}
 
-\title{Softvér v automobilovom priemysle\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2020/21, vedenie: Ing. Fedor Lehocki, Phd.}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Softvér v automobilovom priemysle\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Ing. Fedor Lehocki, Phd.}} % meno a priezvisko vyučujúceho na cvičeniach
 
 \author{Peter Zimmermann\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
@@ -61,45 +61,27 @@ Vývoj automobilového softvéru a jeho samotné aplikovanie je v dnešnej dobe 
 Prvý z postupov procesu je budovanie systému. V tomto postupe sa výrobcovia originálnych zariadení obvykle zaoberajú požiadavkami, ktoré sú primárne zamerané na funkčnosť zariadenia, ktoré bude najviac vyhovovať stanoveným požiadavkám (npr. riadiaca jednotka, hardvér palubného počítača). Títo výrobcovia sa vo väčšine prípadov riadia architektúrou automobilového open systému s názvom „AUTOSAR“. AUTOSAR je v dnešnej dobe celosvetové vývojove partnerstvo v oblasti softvéru a elektroniky v automobiloch. 
 
 Druhým z postupov je vývoj samotného softvéru, ktorého hlavným cieľom je vytvoriť viacero programovacích kódov, z ktorých sa vyberajú tie najvhodnejšie, ktoré budú najlepšie pracovať s už zvolenými zariadeniami. Aby sa dokázali rozlíšiť rôzne úrovne zložitosti softvéru, možno použiť dva najbežnejšie modely a V-Model a Agile model.  
-Posledným postupom je samotná prevádzka. Znamená to, že každý softvér je aj po vyrobení a uvedenia do predaju udržiavaný aktualizáciami, aby prevádzka a funkčnosť samotného softvéru bola čo najdlhšia.
+Posledným postupom je samotná prevádzka. Znamená to, že každý softvér je aj po vyrobení a uvedenia do predaju udržiavaný aktualizáciami, aby prevádzka a funkčnosť samotného softvéru bola čo najdlhšia. \cite{Coplien:MPD}
 
 
 
 
 \section{Modely pre vývoj automobilového softvéru} \label{modely}
 
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
-
-Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
-
+Táto sekcia slúži na priblíženie dvoch široko známych modelov vo vývoji softvérov pre automobily.
 
 \subsection{V-Model} \label{vmodel}
 
+V-Model je v dnešnej dobe najpoužívanejší model vo automobilovom priemysle. Je rozdelený do troch častí. Prvou časťou je definovanie si krokov. Po tejto časti prichádza na rad samotné programovanie, po ktorom nasleduje overovanie predošlých krokov. Funguje to na tom princípe, že sa po fáze programovania otočí naspäť nahor na overovanie a výsledok každej fázy sa overí ešte predtým, ako sa prejde do nasledujúcej fázy V-Modelu.
+
 \subsection{Agile Model} \label{agilemodel}
+
+Tento model z veľkej časti dáva do popredia evolučnný rozvoj a rapídne zmeny. Vo viacerých prijektoch sa softvéroví inžinieri rozhodnú pre tento spôsob z dôvodu, že vďaka nemu dokážu spracovať aj nepredpokladané zmeny zo strany zákaznických požiadaviek. Medzi najväčšie výhody patrí to, že nemá pevné fázy, na rozdiel od V-Modelu. Z tohto dôvodu je Agile Model viac flexibilný, čo má za následok zvýšenie produktivity. 
 
 \subsection{Porovnávanie V-Modelu a Agile Modelu} \label{porovnanie}
 
-Niekedy treba uviesť zoznam:
+Obidva modely su známe najmä z toho dôvodu, že sú jednoduché. Agile Model je navrhnutý tak, aby bol čo najmenej zložitý vo vývojových procesoch. Ale z dôvodu, že softvér v automobiloch vyžaduje správnu spojitosť meddzi softvérovou intergritou, sa v praxi častejšie využíva V-Model. Okrem toho, Agile Model ma viacero nevýhod, ktoré sa vo vývoji softvéru pre automobily považujú za kľúčové , ako napríklad: slabá softvérová integrita, obmedzené znovu použitie kódu, nepriaznivé efekty na kvalitu práce a zložitá organizácia celej štruktúry. 
 
-\begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
-\end{itemize}
-
-Ten istý zoznam, len číslovaný:
-
-\begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
-\end{enumerate}
 
 
 \subsection{Ešte nejaké vysvetlenie} \label{ina:este}
