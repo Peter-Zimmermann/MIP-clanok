@@ -4,18 +4,18 @@
 
 \usepackage[slovak]{babel}
 %\usepackage[T1]{fontenc}
-\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[IL2]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{url} % príkaz \url na formátovanie URL
-\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage{url} 
+\usepackage{hyperref}
 
 \usepackage{cite}
 %\usepackage{times}
 
 \pagestyle{headings}
 
-\title{Softvér v automobilovom priemysle\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Ing. Fedor Lehocki, Phd.}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Softvér v automobilovom priemysle\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Ing. Fedor Lehocki, Phd.}} 
 
 \author{Peter Zimmermann\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
@@ -23,7 +23,7 @@
 	{\small \texttt{xzimmermann@stuba.sk}}
 	}
 
-\date{\small 11. október 2021} % upravte
+\date{\small 11. október 2021} 
 
 
 
@@ -32,23 +32,33 @@
 \maketitle
 
 \begin{abstract}
-\ldots Automobilový priemysel stle napreduje a každým rokom sa dáva čoraz väčši dôraz na softvér, ako na samotné mechanické vlastnosti alebo diely vozidiel. Pri vývoji automobilových softvérov je kľúčové využívať vopred stanovené postupy, ktoré pozostávajú z budovania systému pre daný softvér, jeho samotný vývoj a následná prevádzka. Realizáciu týchto postupov zabezpečujú modely, s ktorými je realizácia intenzívnejšia, keďže dopredu poznáme všetky fázy (V-Model), alebo model, ktorý nemá vopred stanovené pevné fázy, takže je viac otvorený a kreatívnejší (Agile Model). Jednou z najdôležitejších činností je testovanie už vyvinutého softvéru, ktorým treba zistiť, či je prevádzka daného softvéru plne bezpečná a spoľahlivá. Taktiež je v práci ukázane, ako odkáže moderný softvér v automobiloch predpokladať možnu škodu pri vzniknutom nebezpečenstve a zabrániť jej.
+\ldots Automobilový priemysel stále napreduje a každým rokom sa dáva čoraz väčši dôraz na softvér automobilov, ako na samotné mechanické vlastnosti alebo diely vozidiel. Pri vývoji automobilových softvérov je kľúčové využívať vopred stanovené postupy, ktoré pozostávajú z budovania systému pre daný softvér, jeho samotný vývoj a následná prevádzka. Realizáciu týchto postupov zabezpečujú modely, s ktorými je realizácia intenzívnejšia, keďže dopredu poznáme všetky fázy (V-Model), alebo model, ktorý nemá vopred stanovené pevné fázy, takže je viac otvorený a kreatívnejší (Agile Model). Jednou z najdôležitejších činností je testovanie už vyvinutého softvéru, ktorým treba zistiť, či je prevádzka daného softvéru plne bezpečná a spoľahlivá. Taktiež je v článku ukázane, ako dokáže moderný softvér v automobiloch predpokladať možnú škodu pri vzniknutom nebezpečenstve a čo najefektívnejšie jej zabrániť.
 \end{abstract}
 
 
 
 \section{Úvod}
 
-Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
 
-Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
-Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
-Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
-Záverečné poznámky prináša časť~\ref{zaver}.
+Softvér v automobilovom priemysle je téma, ktorá začína byť priamoúmerne s každým rokom čoraz viac dôležitejšia, keďže moderné vozidlá v čoraz väčšej miere závisia od ich softvéru. 
+
+Mojim hlavným cieľom tohto článku je oboznámiť čitateľa s informáciami ohľadom softvéru v automobilovom priemysle a taktiež si vo väčšom rozmere rozšíriť moje doterajšie poznatky. 
+
+Prvá téma, ktorej som sa venoval, bola "Postupy vo vývoji automobilového softvéru".~\ref{postupy} Táto téma slúži na vysvetlenie samotných postupov.
+
+Druhou z tém bola téma s názvom "Modely pri vývoji automobilového softvéru".~\ref{modely} V tejto téme som bližšie priblížil, čo vo všeobecnosti sú tieto modely a prečo sú dôležité. Táto téma obsahuje viacero podkapitol, ktoré bližšie opisujú jednotlivé modely.~\ref{vmodel}~\ref{agilemodel}   
+
+Ďalšou problematikou je "Testovanie"  \ref{testovanie} už vyvinutého softvéru, ktoré patrí medzi jedno z najdôležitejších činností pri vývoji softvéru pre automobily. 
+
+Posledná téma, ktorej som sa venoval bola "Modelovanie nebezpečenstva a predikcia možnej autonehody".~\ref{modelovanie}. Táto téma môže byť veľmi zaujímava aj pre nezainteresovaných ľudí, keďže s touto funkciou sa už mohol ktokoľvek stretnúť pri riadení moderného automobilu.
+
+Na konci čláku je samotný záver,~\ref{zaver} ktorý hodnotí celkové časti článku, jeho dôležité fakty a môj osobný pohľad na túto problematiku.
+Za záverom nasleduje literatúra, z ktorej som čerpal pri písani tohto článku.
 
 
 
-\section{Postupy vo vývoji automobilového softvéru} \label{Postupy}
+\section{Postupy vo vývoji automobilového softvéru} \label{postupy}
+
 V tejto sekcii sa primárne zameriavam na tri hlavné postupy pri vývoji automobilového softvéru.
 
 Vývoj automobilového softvéru a jeho samotné aplikovanie je v dnešnej dobe jeden z najhlavnejších procesov pri zhotovovaní automobilu. Je to proces, ktorý pozostáva z viacerých postupov: 
@@ -60,9 +70,9 @@ Vývoj automobilového softvéru a jeho samotné aplikovanie je v dnešnej dobe 
 
 Prvý z postupov procesu je budovanie systému. V tomto postupe sa výrobcovia originálnych zariadení obvykle zaoberajú požiadavkami, ktoré sú primárne zamerané na funkčnosť zariadenia, ktoré bude najviac vyhovovať stanoveným požiadavkám (npr. riadiaca jednotka, hardvér palubného počítača). Títo výrobcovia sa vo väčšine prípadov riadia architektúrou automobilového open systému s názvom „AUTOSAR“. AUTOSAR je v dnešnej dobe celosvetové vývojove partnerstvo v oblasti softvéru a elektroniky v automobiloch. 
 
-Druhým z postupov je vývoj samotného softvéru, ktorého hlavným cieľom je vytvoriť viacero programovacích kódov, z ktorých sa vyberajú tie najvhodnejšie, ktoré budú najlepšie pracovať s už zvolenými zariadeniami. Aby sa dokázali rozlíšiť rôzne úrovne zložitosti softvéru, možno použiť dva najbežnejšie modely a V-Model a Agile model.  
-Posledným postupom je samotná prevádzka. Znamená to, že každý softvér je aj po vyrobení a uvedenia do predaju udržiavaný aktualizáciami, aby prevádzka a funkčnosť samotného softvéru bola čo najdlhšia. \cite{Coplien:MPD}
+Druhým z postupov je vývoj samotného softvéru, ktorého hlavným cieľom je vytvoriť viacero programovacích kódov, z ktorých sa vyberajú tie najvhodnejšie, ktoré budú najlepšie pracovať s už zvolenými zariadeniami. Aby sa dokázali rozlíšiť rôzne úrovne zložitosti softvéru, možno použiť dva najbežnejšie modely a to V-Model a Agile model.  
 
+Posledným postupom je samotná prevádzka. Znamená to, že každý softvér je aj po vyrobení a uvedenia do predaju udržiavaný aktualizáciami, aby prevádzka a funkčnosť samotného softvéru bola čo najdlhšia a najefektívnejšia. \cite{Moukahal:VSE}
 
 
 
@@ -70,46 +80,62 @@ Posledným postupom je samotná prevádzka. Znamená to, že každý softvér je
 
 Táto sekcia slúži na priblíženie dvoch široko známych modelov vo vývoji softvérov pre automobily.
 
+
 \subsection{V-Model} \label{vmodel}
 
-V-Model je v dnešnej dobe najpoužívanejší model vo automobilovom priemysle. Je rozdelený do troch častí. Prvou časťou je definovanie si krokov. Po tejto časti prichádza na rad samotné programovanie, po ktorom nasleduje overovanie predošlých krokov. Funguje to na tom princípe, že sa po fáze programovania otočí naspäť nahor na overovanie a výsledok každej fázy sa overí ešte predtým, ako sa prejde do nasledujúcej fázy V-Modelu.
+V-Model je v dnešnej dobe najpoužívanejší model v automobilovom priemysle. Je rozdelený do troch častí. Prvou časťou je definovanie si krokov. Po tejto časti prichádza na rad samotné programovanie, po ktorom nasleduje overovanie predošlých krokov. Funguje to na tom princípe, že sa po fáze programovania otočí naspäť nahor na overovanie a výsledok každej fázy sa overí ešte predtým, ako sa prejde do nasledujúcej fázy V-Modelu.
+
 
 \subsection{Agile Model} \label{agilemodel}
 
 Tento model z veľkej časti dáva do popredia evolučnný rozvoj a rapídne zmeny. Vo viacerých prijektoch sa softvéroví inžinieri rozhodnú pre tento spôsob z dôvodu, že vďaka nemu dokážu spracovať aj nepredpokladané zmeny zo strany zákaznických požiadaviek. Medzi najväčšie výhody patrí to, že nemá pevné fázy, na rozdiel od V-Modelu. Z tohto dôvodu je Agile Model viac flexibilný, čo má za následok zvýšenie produktivity. 
 
+
 \subsection{Porovnávanie V-Modelu a Agile Modelu} \label{porovnanie}
 
-Obidva modely su známe najmä z toho dôvodu, že sú jednoduché. Agile Model je navrhnutý tak, aby bol čo najmenej zložitý vo vývojových procesoch. Ale z dôvodu, že softvér v automobiloch vyžaduje správnu spojitosť meddzi softvérovou intergritou, sa v praxi častejšie využíva V-Model. Okrem toho, Agile Model ma viacero nevýhod, ktoré sa vo vývoji softvéru pre automobily považujú za kľúčové , ako napríklad: slabá softvérová integrita, obmedzené znovu použitie kódu, nepriaznivé efekty na kvalitu práce a zložitá organizácia celej štruktúry. 
-
-
-
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
-
-\paragraph{Veľmi dôležitá poznámka.}
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
+Obidva modely su známe najmä z toho dôvodu, že sú jednoduché. Agile Model je navrhnutý tak, aby bol čo najmenej zložitý vo vývojových procesoch. Ale z dôvodu, že softvér v automobiloch vyžaduje komplexnú celistvosť sa v praxi častejšie využíva V-Model. Okrem toho, Agile Model ma viacero nevýhod, ktoré sa vo vývoji softvéru pre automobily považujú za kľúčové, ako napríklad: slabá softvérová integrita, obmedzené znovu použitie kódu, nepriaznivé efekty na kvalitu práce a zložitá organizácia celej štruktúry. 
 
 
 
 \section{Testovanie} \label{testovanie}
 
-\subsection{Komplexné informácie k testovaniu softvéru} \label{komplexnetestovanie}
+Testovanie softvéru je v automobilovom priemysle jednou z najdôležitejších časti, ktorá by nemohla ostať nikdy zanedbaná. Testovaním každého softvéru sa okrem správnej funkčnosti testuje aj bezpečnosť. Pri vývoji softvéru v automobilovom priemysle sa okrem ohľadu na funkcie a schopnosti softvéru berie ohľad aj na jeho bezpečnosť, keďže zákazníci sa potrebujú v automobiloch cítiť hlavne bezpečne.
+
+\subsection{Proces testovania sloftvéru} \label{procestestovania}
+
+Najviac rozšíreným modelom pre testovanie softvéru je V-Model. Testovanie podľa V-Modelu je organizované do viacerých krokov, ktorými sú:  jednotkové testovanie, integrácia, systém a jeho akceptovanie.
+
+\begin{enumerate}
+\item Jednotkové testovanie
+Účelom jednotkového testovania je zobrať najmenšiu časť softvéru, ktorú je možné otestovať, izolovať ju od zvyšku kódu a skúšať, či sa správa tak, ako sme očakávali. Každá jednotka sa testuje samostatne ešte predtým, než sa všetky jednotky integrujú do modulov.
+\item Testovanie integrity
+Testovanie integrity spočíva vo vyskúšaní rozhraní medzi jednotlivými modulmi. Za svoj vstup berie jednotlivé testované jednotky, zhromaždí ich do väčších  skupín, vykoná sa testovanie a následne sa dodáva výstup vo forme integrovaného systému, ktorý je pripravený na jeho testovanie.
+\item Systémové testovanie
+Tento krok je založený na testovaní kompletne zhotoveného systému, ktorý bol nakonfigurovaný v kontrolovanom prostredí pomocou simulácie reálneho času.
+\item Testovanie akceptácie
+Finálnym krokom tohto procesu je testovanie akceptácie, po ktorom je systém prijatý na prevádzkové použitie podľa zámerov používateľa. \cite{Tierno:Testing}
+\end{enumerate}
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{vmodeltestovania}
+\caption{Znázornenie procesu testovania softvéru a jeho jednotlivých krokov.}
+\end{figure}
 
 
 
-\section{Porovnávanie dvoch popredných automobiliek z hľadiska softvéru} \label{automobilky}
+\section{Modelovanie nebezpečenstva a predikcia možnej autonehody} \label{modelovanie}
 
 
 
 
-\section{Záver} \label{zaver} % prípadne iný variant názvu
+\section{Záver} \label{zaver} 
 
 
 
-%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
-
-% týmto sa generuje zoznam literatúry z obsahu súboru .bib podľa toho, na čo sa v článku odkazujete
-\bibliography{HLAVNALITERATURA}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+%\acknowledgement{Peter Zimmermann st. -otec}
+\bibliography{HLAVNALITERATURA} \label{literatura}
+\bibliographystyle{plain} 
 \end{document}
