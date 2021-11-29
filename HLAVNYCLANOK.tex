@@ -101,7 +101,7 @@ Obidva modely su známe najmä z toho dôvodu, že sú jednoduché. Agile Model 
 
 Testovanie softvéru je v automobilovom priemysle jednou z najdôležitejších časti, ktorá by nemohla ostať nikdy zanedbaná. Testovaním každého softvéru sa okrem správnej funkčnosti testuje aj bezpečnosť. Pri vývoji softvéru v automobilovom priemysle sa okrem ohľadu na funkcie a schopnosti softvéru berie ohľad aj na jeho bezpečnosť, keďže zákazníci sa potrebujú v automobiloch cítiť hlavne bezpečne.
 
-\subsection{Proces testovania sloftvéru} \label{procestestovania}
+\subsection{Proces testovania softvéru} \label{procestestovania}
 
 Najviac rozšíreným modelom pre testovanie softvéru je V-Model. Testovanie podľa V-Modelu je organizované do viacerých krokov, ktorými sú:  jednotkové testovanie, integrácia, systém a jeho akceptovanie.
 
@@ -117,15 +117,25 @@ Finálnym krokom tohto procesu je testovanie akceptácie, po ktorom je systém p
 \end{enumerate}
 
 
+
+\section{Modelovanie} \label{modelovanie}
+
+\section{Spôsob modelovania automobilky Tesla} \label{tesla}
+
+\subsection{Auto Labeling} \label{autolabeling}
+
+Automatické modelovania okolia vozidla funguje na spôsobe Clip Labeling.
+
+Clip je objekt, ktorý obsahuje obrovské množstvo dát, ako napríklad videá, rýchlosť a smer vozidla. Tieto objekty sú odosielané na server, na ktorom beží množstvo neurónových sieti, ktoré sú určené pre umelú inteligenciu, vďaka ktorým je možné získať predbežné informácie, ktorými sú jednotlivé body pre identifikovanie objektov na vozovke. 
+
+Prvou úlohou je získanie informácií o vozovke. Tieto informácie sa získavajú pomocou X-ových a Y-ových bodov, vďaka ktorým je možné požiadať neurónové siete o predikciu šírky povrchu vozovky, alebo čiary a zvodidlá. Vďaka tomuto sa získa ďalší bod Z, kvôli ktorému je možné vytvoriť 3D body, ktoré sú následne preprojektované do všetkých kamier z rôznych uhlov. Informácie sa získavajú pomocou viacerých testovacích jázd na jednom alebo viacerých vozidlách, kde sa následne všetky získané informácie spájajú do presnej bodoby zreprodukovanej vozovky.
+
+Vďaka tomuto spôsobu je možné modelovať aj ostatné 3D objekty, ktoré sa nachádzajú na, alebo popri vozovke, ako napríklad budovy, prekážky, chodníky, autá, alebo ľudia. 
 \begin{figure}
 \centering
-\includegraphics[scale=0.3]{vmodeltestovania}
-\caption{Znázornenie procesu testovania softvéru a jeho jednotlivých krokov.}
+\includegraphics[scale=0.1]{teslamodelovanie}
+\caption{Všetky informácie spojené dokopy, ktorým výsledkom je modelovanie podstatných objektov pri jazde vozidlom. Všetky pohyby, ktoré sa reálne vykonávaju, su aj presne modelované. Automobily, ktoré stoja, majú nastavenú rýchlosť 0, aby softvér dokázal indenfikovať, že sú zaparkované a chodci sú stále monitorovaní.}
 \end{figure}
-
-
-
-\section{Modelovanie nebezpečenstva a predikcia možnej autonehody} \label{modelovanie}
 
 
 
@@ -134,8 +144,6 @@ Finálnym krokom tohto procesu je testovanie akceptácie, po ktorom je systém p
 
 
 
-
-%\acknowledgement{Peter Zimmermann st. -otec}
 \bibliography{HLAVNALITERATURA} \label{literatura}
 \bibliographystyle{plain} 
 \end{document}
