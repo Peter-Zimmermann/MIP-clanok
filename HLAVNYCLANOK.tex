@@ -32,7 +32,7 @@
 \maketitle
 
 \begin{abstract}
-\ldots Automobilový priemysel stále napreduje a každým rokom sa dáva čoraz väčši dôraz na softvér automobilov, ako na samotné mechanické vlastnosti alebo diely vozidiel. Pri vývoji automobilových softvérov je kľúčové využívať vopred stanovené postupy, ktoré pozostávajú z budovania systému pre daný softvér, jeho samotný vývoj a následná prevádzka. Realizáciu týchto postupov zabezpečujú modely, s ktorými je realizácia intenzívnejšia, keďže dopredu poznáme všetky fázy (V-Model), alebo model, ktorý nemá vopred stanovené pevné fázy, takže je viac otvorený a kreatívnejší (Agile Model). Jednou z najdôležitejších činností je testovanie už vyvinutého softvéru, ktorým treba zistiť, či je prevádzka daného softvéru plne bezpečná a spoľahlivá. Taktiež je v článku ukázane, ako dokáže moderný softvér v automobiloch predpokladať možnú škodu pri vzniknutom nebezpečenstve a čo najefektívnejšie jej zabrániť.
+\ldots Automobilový priemysel stále napreduje a každým rokom sa dáva čoraz väčši dôraz na softvér automobilov, ako na samotné mechanické vlastnosti alebo diely vozidiel. Pri vývoji automobilových softvérov je kľúčové využívať vopred stanovené postupy, ktoré pozostávajú z budovania systému pre daný softvér, jeho samotný vývoj a následná prevádzka. Realizáciu týchto postupov zabezpečujú modely, s ktorými je realizácia intenzívnejšia, keďže dopredu poznáme všetky fázy (V-Model), alebo model, ktorý nemá vopred stanovené pevné fázy, takže je viac otvorený a kreatívnejší (Agile Model). Jednou z najdôležitejších činností je testovanie už vyvinutého softvéru, ktorým treba zistiť, či je prevádzka daného softvéru plne bezpečná a spoľahlivá. Taktiež je v článku ukázane, ako dokáže moderný softvér v automobiloch modelovať okolité objekty ako autá, budovy, alebo chodcov.
 \end{abstract}
 
 
@@ -115,12 +115,19 @@ Tento krok je založený na testovaní kompletne zhotoveného systému, ktorý b
 \item Testovanie akceptácie
 Finálnym krokom tohto procesu je testovanie akceptácie, po ktorom je systém prijatý na prevádzkové použitie podľa zámerov používateľa. \cite{Tierno:Testing}
 \end{enumerate}
+\begin{figure}
+\includegraphics[scale=0.5]{diagramtestovanie.jpg}
+\centering
+\caption{Vývojový diagram procesu testovania softvéru. Prvotným krokom po začatí testovania je jednotkove testovanie. Ak bolo úspešné, prechádza sa na ďalš krok. Ak nebolo, tak toto testovanie sa bude vykonávať dovtedy, kým nebude úspešné. Rovnaký proces nastáva aj pri testovaní integrity, systémovom testovaní a testovaní akceptácie. Keď sa všetky kroky testovania vykonajú správne, nastáva prijatie samotného softvéru na použite.}
+\end{figure}
 
 
 
-\section{Modelovanie} \label{modelovanie}
+\section{Spôsob modelovania automobilky Tesla} \label{modelovanie}
+Tesla patrí medzi jednu z najlepších, ak nie najlepšiu, automobilku z hľadiska umelej inteligencie, autonomného jazdenia, komplexnosti softvéru vo vozidlách.  
+Vďaka ich progresívnosti a futuristickému zmýšlaniu, Tesla využíva najmodernejšie a najviac inovatívne funkcie a postupy pri vytváraní ich softvérov. 
 
-\section{Spôsob modelovania automobilky Tesla} \label{tesla}
+Jedným z najnovších postupov pre modelovanie okolia a objektov je takzvaný Auto Labeling, ktorý je podrobnejšie vysvetlený v nasledujúcej podkapitole.
 
 \subsection{Auto Labeling} \label{autolabeling}
 
@@ -130,12 +137,7 @@ Clip je objekt, ktorý obsahuje obrovské množstvo dát, ako napríklad videá,
 
 Prvou úlohou je získanie informácií o vozovke. Tieto informácie sa získavajú pomocou X-ových a Y-ových bodov, vďaka ktorým je možné požiadať neurónové siete o predikciu šírky povrchu vozovky, alebo čiary a zvodidlá. Vďaka tomuto sa získa ďalší bod Z, kvôli ktorému je možné vytvoriť 3D body, ktoré sú následne preprojektované do všetkých kamier z rôznych uhlov. Informácie sa získavajú pomocou viacerých testovacích jázd na jednom alebo viacerých vozidlách, kde sa následne všetky získané informácie spájajú do presnej bodoby zreprodukovanej vozovky.
 
-Vďaka tomuto spôsobu je možné modelovať aj ostatné 3D objekty, ktoré sa nachádzajú na, alebo popri vozovke, ako napríklad budovy, prekážky, chodníky, autá, alebo ľudia. 
-\begin{figure}
-\centering
-\includegraphics[scale=0.1]{teslamodelovanie}
-\caption{Všetky informácie spojené dokopy, ktorým výsledkom je modelovanie podstatných objektov pri jazde vozidlom. Všetky pohyby, ktoré sa reálne vykonávaju, su aj presne modelované. Automobily, ktoré stoja, majú nastavenú rýchlosť 0, aby softvér dokázal indenfikovať, že sú zaparkované a chodci sú stále monitorovaní.}
-\end{figure}
+Vďaka tomuto spôsobu je možné modelovať aj ostatné 3D objekty, ktoré sa nachádzajú na, alebo popri vozovke, ako napríklad budovy, prekážky, chodníky, autá, alebo ľudia. \cite{Tesla:AID}
 
 
 
