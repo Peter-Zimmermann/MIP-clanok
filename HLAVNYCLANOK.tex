@@ -61,7 +61,6 @@ Za záverom nasleduje literatúra, z ktorej som čerpal pri písani tohto člán
 
 V tejto sekcii sa primárne zameriavam na tri hlavné postupy pri vývoji automobilového softvéru.
 
-Vývoj automobilového softvéru a jeho samotné aplikovanie je v dnešnej dobe jeden z najhlavnejších procesov pri zhotovovaní automobilu. Je to proces, ktorý pozostáva z viacerých postupov: 
 \begin{enumerate}
 \item Budovanie systému
 \item Vývoj softvéru
@@ -83,7 +82,7 @@ Táto sekcia slúži na priblíženie dvoch široko známych modelov vo vývoji 
 
 \subsection{V-Model} \label{vmodel}
 
-V-Model je v dnešnej dobe najpoužívanejší model v automobilovom priemysle. Je rozdelený do troch častí. Prvou časťou je definovanie si krokov. Po tejto časti prichádza na rad samotné programovanie, po ktorom nasleduje overovanie predošlých krokov. Funguje to na tom princípe, že sa po fáze programovania otočí naspäť nahor na overovanie a výsledok každej fázy sa overí ešte predtým, ako sa prejde do nasledujúcej fázy V-Modelu.
+V-Model je v dnešnej dobe najpoužívanejší model v automobilovom priemysle. Je rozdelený do troch fáz. Prvou fázou je definovanie si krokov. Po tejto fáze prichádza na rad samotné programovanie, po ktorom nasleduje overovanie predošlých krokov. Funguje to na tom princípe, že sa po fáze programovania otočí naspäť nahor na overovanie a výsledok každej fázy sa overí ešte predtým, ako sa prejde do nasledujúcej fázy V-Modelu.
 
 
 \subsection{Agile Model} \label{agilemodel}
@@ -93,13 +92,19 @@ Tento model z veľkej časti dáva do popredia evolučnný rozvoj a rapídne zme
 
 \subsection{Porovnávanie V-Modelu a Agile Modelu} \label{porovnanie}
 
-Obidva modely su známe najmä z toho dôvodu, že sú jednoduché. Agile Model je navrhnutý tak, aby bol čo najmenej zložitý vo vývojových procesoch. Ale z dôvodu, že softvér v automobiloch vyžaduje komplexnú celistvosť sa v praxi častejšie využíva V-Model. Okrem toho, Agile Model ma viacero nevýhod, ktoré sa vo vývoji softvéru pre automobily považujú za kľúčové, ako napríklad: slabá softvérová integrita, obmedzené znovu použitie kódu, nepriaznivé efekty na kvalitu práce a zložitá organizácia celej štruktúry. 
+Obidva modely su známe najmä z toho dôvodu, že sú jednoduché. Agile Model je navrhnutý tak, aby bol čo najmenej zložitý vo vývojových procesoch. Ale z dôvodu, že softvér v automobiloch vyžaduje komplexnú celistvosť sa v praxi častejšie využíva V-Model. Okrem toho, Agile Model ma viacero nevýhod. \cite{Improving}
 
-
+\begin{figure}[h]
+\includegraphics[scale=0.75]{porovnanie.png}
+\centering
+\caption{Tabuľka, ktorá znázorňuje výhody a nevýhody V-Modelu, rovnako ako aj Agile-Modelu.}
+\end{figure}
 
 \section{Testovanie} \label{testovanie}
 
-Testovanie softvéru je v automobilovom priemysle jednou z najdôležitejších časti, ktorá by nemohla ostať nikdy zanedbaná. Testovaním každého softvéru sa okrem správnej funkčnosti testuje aj bezpečnosť. Pri vývoji softvéru v automobilovom priemysle sa okrem ohľadu na funkcie a schopnosti softvéru berie ohľad aj na jeho bezpečnosť, keďže zákazníci sa potrebujú v automobiloch cítiť hlavne bezpečne.
+Testovanie softvéru je v automobilovom priemysle jednou z najdôležitejších časti, ktorá by nemohla ostať nikdy zanedbaná. Testovaním každého softvéru sa okrem správnej funkčnosti testuje aj bezpečnosť. Pri vývoji softvéru v automobilovom priemysle sa okrem ohľadu na funkcie a schopnosti softvéru berie ohľad aj na jeho bezpečnosť, keďže zákazníci sa potrebujú v automobiloch cítiť hlavne bezpečne. \cite{Safety}
+
+
 
 \subsection{Proces testovania softvéru} \label{procestestovania}
 
@@ -115,7 +120,8 @@ Tento krok je založený na testovaní kompletne zhotoveného systému, ktorý b
 \item Testovanie akceptácie
 Finálnym krokom tohto procesu je testovanie akceptácie, po ktorom je systém prijatý na prevádzkové použitie podľa zámerov používateľa. \cite{Tierno:Testing}
 \end{enumerate}
-\begin{figure}
+
+\begin{figure}[h]
 \includegraphics[scale=0.5]{diagramtestovanie.jpg}
 \centering
 \caption{Vývojový diagram procesu testovania softvéru. Prvotným krokom po začatí testovania je jednotkove testovanie. Ak bolo úspešné, prechádza sa na ďalš krok. Ak nebolo, tak toto testovanie sa bude vykonávať dovtedy, kým nebude úspešné. Rovnaký proces nastáva aj pri testovaní integrity, systémovom testovaní a testovaní akceptácie. Keď sa všetky kroky testovania vykonajú správne, nastáva prijatie samotného softvéru na použite.}
@@ -125,7 +131,7 @@ Finálnym krokom tohto procesu je testovanie akceptácie, po ktorom je systém p
 
 \section{Spôsob modelovania automobilky Tesla} \label{modelovanie}
 Tesla patrí medzi jednu z najlepších, ak nie najlepšiu, automobilku z hľadiska umelej inteligencie, autonomného jazdenia, komplexnosti softvéru vo vozidlách.  
-Vďaka ich progresívnosti a futuristickému zmýšlaniu, Tesla využíva najmodernejšie a najviac inovatívne funkcie a postupy pri vytváraní ich softvérov. 
+Vďaka ich progresívnosti a futuristickému zmýšlaniu, Tesla využíva najmodernejšie a najviac inovatívne funkcie a postupy pri vytváraní ich softvérov. \cite{TeslaS}
 
 Jedným z najnovších postupov pre modelovanie okolia a objektov je takzvaný Auto Labeling, ktorý je podrobnejšie vysvetlený v nasledujúcej podkapitole.
 
@@ -135,14 +141,36 @@ Automatické modelovania okolia vozidla funguje na spôsobe Clip Labeling.
 
 Clip je objekt, ktorý obsahuje obrovské množstvo dát, ako napríklad videá, rýchlosť a smer vozidla. Tieto objekty sú odosielané na server, na ktorom beží množstvo neurónových sieti, ktoré sú určené pre umelú inteligenciu, vďaka ktorým je možné získať predbežné informácie, ktorými sú jednotlivé body pre identifikovanie objektov na vozovke. 
 
-Prvou úlohou je získanie informácií o vozovke. Tieto informácie sa získavajú pomocou X-ových a Y-ových bodov, vďaka ktorým je možné požiadať neurónové siete o predikciu šírky povrchu vozovky, alebo čiary a zvodidlá. Vďaka tomuto sa získa ďalší bod Z, kvôli ktorému je možné vytvoriť 3D body, ktoré sú následne preprojektované do všetkých kamier z rôznych uhlov. Informácie sa získavajú pomocou viacerých testovacích jázd na jednom alebo viacerých vozidlách, kde sa následne všetky získané informácie spájajú do presnej bodoby zreprodukovanej vozovky.
+Prvou úlohou je získanie informácií o vozovke. Tieto informácie sa získavajú pomocou X-ových a Y-ových bodov, vďaka ktorým je možné požiadať neurónové siete o predikciu šírky povrchu vozovky, alebo čiary a zvodidlá. Vďaka tomuto sa získa ďalší bod Z, kvôli ktorému je možné vytvoriť 3D body, ktoré sú následne preprojektované do všetkých kamier z rôznych uhlov. Informácie sa získavajú pomocou viacerých testovacích jázd na jednom alebo viacerých vozidlách, kde sa následne všetky získané informácie spájajú do presnej bodoby zreprodukovanej vozovky. 
 
-Vďaka tomuto spôsobu je možné modelovať aj ostatné 3D objekty, ktoré sa nachádzajú na, alebo popri vozovke, ako napríklad budovy, prekážky, chodníky, autá, alebo ľudia. \cite{Tesla:AID}
+Vďaka tomuto spôsobu je možné modelovať aj ostatné 3D objekty, ktoré sa nachádzajú na, alebo popri vozovke, ako napríklad budovy, prekážky, chodníky, autá, alebo ľudia. \cite{Tesla}
 
 
+\section{Reakcie na témy z prednášok} \label{reakcie}
+
+\paragraph{Grafické vyjadrenie informácií v informatike}
+Táto prednáša bola zameraná na grafické vyjadrenie informácií v informatike, kde sa ako hlavné témy rozoberali vizualizácia, prečo je grafické vyjadrenie informácií dôležité, aké sú ich nástroje a využitia a ich praktická realizácia. Vizualizácia je nejaké znázornenie, alebo formalizácia daného predmetu. Z môjho pohľadu je vizualizácia v akomkoľvek smere veľmi dôležitá, keďže je lepšie raz vidieť, ako viackrát počuť.
+
+\paragraph{Načo budem inžinierom (bakalárom) ?} 
+Táto prednáška medzi moje najobľúbenejšie, keďže bol na ňu pozvaný dekan Fakulty Informatiky a Informačných Technológií STU, prof. Ing. Ivan Kotuliak, Phd. Prednášal nám rozsiahlé informácie, ktoré boli podané veľmi interaktívnou formou, ktoré sa týkali napríklad motivácie  pre štúdium, platy v IT na Slovensku, profesie v IT, alebo vedy. Dozvedel som sa mnoho nových informácií, hlavne z psychologického hľadiska a samozrejme z pohľadu pôsobenia v IT. 
+
+\paragraph{Udržateľnosť a etika} 
+Prednáška na tému "Udržateľnosť a etika bola v mojom vnímaní zameraná na vnútornú motiváciu študentov pri študovaní vysokej školy. Dôležitými radami, ktoré odkazovali na to, aby sme mali jasný cieľ, uniesli sme náročnosť posledných dní a v neposlednom rade budovanie udržateľnosti. Okrem zaujímavých diskusií, ktoré boli zamerané na udržateľnosť študentov na prednáškách, zlepšovanie prednášok ma taktiež veľmi zaujala časť, ktorá sa zameriavala na vplyv počitača na zdravie človeka. Myslím si, že zdravie človeka by malo byť aj pri práci v IT na prvom mieste, keďže zdravie je to, čo môže ovplyvniť inšpiráciu a produktivitu pri práci.
 
 
 \section{Záver} \label{zaver} 
+
+Hlavným cieľom tohto článku bolo oboznámiť čitateľa s informáciami ohľadom softvéru v automobilovom priemysle a taktiež si vo väčšom rozmere rozšíriť moje doterajšie poznatky. 
+
+V prvej časti článku, som podrobnejšie priblížil postupy vo vývoji automobilového softvéru, kde som sa systematicky rozpísal hlavné ciele daných postupov a načo sú dané postupy využívané. 
+
+V druhej časti som rozobral dva najpouživanejšie modely, ktoré slúžia na definovanie jednotlivých krokov, pomocou ktorých sa bude softvér vyvíjať.
+
+Treťou kapitolou bolo vysvetlenie toho, ako funguje testovanie softvéru v automobilovom priemysle. Jednotlivé kroky testovania softvéru som priblížil aj pomocou vývojového diagramu, z ktorého je postupnosť pri testovani lepšie čitateľná. 
+
+Poslednou a z môjho pohľadu najdôležitejšou a najzaujímavejšou témou tohto článku bol spôsob modelovania automobilky Tesla. V tejto kapitole som podrobnejšie vysvetlil najnovsím spôsob, akým táto automobilová firma modeluje ostatné vozidlá, budovy, chodcov, alebo ostatné objekty. 
+
+Dôležitosť sofvéru v automobilovom priemysle je v dnešnej dobe jedným z najdôležitejších faktorov pri návrhu a následnej realizácií nových vozidiel. Podľa posledných zistených informácií je dôležitosť samotného softvéru pri vývoji automobilu na úrovni 40\%. Z môjho pohľadu sa s pribúdajúcim časom bude na softvér v automobile dávať čoraz väčši dôraz, keďže terajšia softvérová doba stále napreduje a čo bolo včera aktuálne a najnovšie, dnes už byť nemusí.
 
 
 
